@@ -6,7 +6,5 @@ node ('local_ubuntu'){
     }  
     stage('BUILD'){
         echo "Build phase"
-    }
-
-   
+    }   
 }
