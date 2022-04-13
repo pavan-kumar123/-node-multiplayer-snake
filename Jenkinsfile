@@ -13,7 +13,6 @@ node ('local_ubuntu'){
     stage('Pull Image and Run a Container') {
         sh "docker-compose down"
         sh "docker-compose up -d"
-
     }
 }
 
