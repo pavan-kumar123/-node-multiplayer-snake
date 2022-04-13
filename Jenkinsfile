@@ -1,9 +1,6 @@
-pipeline {
-    agent any
-
-    stages {
+node ('local_ubunut'){  
         stage('Cloing') {
-            
+
             checkout scm
         }
         stage('Build') {
@@ -22,4 +19,3 @@ pipeline {
             }
         }
     }
-}
