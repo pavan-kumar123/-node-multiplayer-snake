@@ -4,9 +4,9 @@ node ('local_ubuntu'){
         /* Let's make sure we have the repository cloned to our workspace */
        checkout scm
     }  
-    // stage('Build and Tag'){
-    //     app = docker.build(pa1kilaparthi/snake_game)
-    // }   
+    stage('Build and Tag'){
+         app = docker.build("pa1kilaparthi/snake_game")
+    }   
     // stage('Publist To DockerHUb'){
     //     docker.withRegistry('https://registry.hub.docker.com','pa1_docker_cred')
     //     app.push("latest")
