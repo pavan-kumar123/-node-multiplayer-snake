@@ -8,3 +8,4 @@ node ('local_ubuntu'){
         echo "Build phase"
     }   
 }
+
