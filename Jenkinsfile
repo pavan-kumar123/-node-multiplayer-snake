@@ -9,6 +9,7 @@ node ('local_ubuntu'){
     }   
     stage('Publist To DockerHUb'){
         docker.withRegistry('https://registry.hub.docker.com','pa1_docker_cred')
+        app.push("latest")
     } 
     stage('Pull Image and Run a Container') {
         sh "docker-compose down"
