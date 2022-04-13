@@ -1,23 +1,25 @@
-node ('local_ubunut'){  
-    //def app
-    stage('Cloning Git') {
-        /* Let's make sure we have the repository cloned to our workspace */
-       checkout scm
-    }  
-    stage('Build') {
+pipeline {
+    agent any
+
+    stages {
+        stage('Cloing') {
+            
+            checkout scm
+        }
+        stage('Build') {
             steps {
                 echo 'kilaparthi'
             }
         }
-    stage('Publish') {
+        stage('Publish') {
             steps {
                 echo 'pavan'
             }
         }
-    stage('Deploy') {
+        stage('Deploy') {
             steps {
                 echo 'kumar '
             }
         }
-
+    }
 }
