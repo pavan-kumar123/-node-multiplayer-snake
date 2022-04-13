@@ -1,11 +1,12 @@
 node ('local_ubuntu'){  
- def app
+ //def app
     stage('Cloning Git') {
         /* Let's make sure we have the repository cloned to our workspace */
        checkout scm
     }  
     stage('Build and Tag'){
-         app = docker.build("pa1kilaparthi/snake_game")
+        // app = docker.build("pa1kilaparthi/snake_game")
+        sh "docker build -t pa1kilaparthi/snake_game ."
     }   
     // stage('Publist To DockerHUb'){
     //     docker.withRegistry('https://registry.hub.docker.com','pa1_docker_cred')
