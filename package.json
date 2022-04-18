@@ -12,7 +12,6 @@
     "test": "mocha",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha",
     "sonar": "node sonar-project.js"
-    
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -31,6 +30,7 @@
     "less-middleware": "^2.1.0",
     "serve-favicon": "^2.3.0",
     "socket.io": "^1.4.6",
+    "sonarqube-scanner": "^2.8.1",
     "validator": "^5.4.0"
   },
   "license": "MIT"
