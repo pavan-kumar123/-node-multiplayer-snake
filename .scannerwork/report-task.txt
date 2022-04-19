@@ -1,0 +1,6 @@
+projectKey=node-multiplayer-snake
+serverUrl=http://172.18.3.141:9000
+serverVersion=9.4.0.54424
+dashboardUrl=http://172.18.3.141:9000/dashboard?id=node-multiplayer-snake
+ceTaskId=AYA7h5XQ2aw0W8RTLgeg
+ceTaskUrl=http://172.18.3.141:9000/api/ce/task?id=AYA7h5XQ2aw0W8RTLgeg

@@ -20,6 +20,11 @@ node ('local_ubuntu'){
         /* Let's make sure we have the repository cloned to our workspace */
        echo "Build"
     }
+
+    stage('Arachani') {
+        /* Let's make sure we have the repository cloned to our workspace */
+       build 'DAST-Arachini'
+    }
 }
 
 
