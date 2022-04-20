@@ -23,11 +23,11 @@ node ('local_ubuntu'){
 
     stage('Arachani') {
         /* Let's make sure we have the repository cloned to our workspace */
-        environment { 
-                    name= pavan
-                }
+        // environment { 
+        //             name= pavan
+        //         }
             steps {
-                
+                // echo $name
                 build 'DAST-Arachini'
             }
        //build 'DAST-Arachini'
