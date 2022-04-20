@@ -31,8 +31,12 @@ node ('local_ubuntu'){
 
 
       publishHTML target: [
+            allowMissing: false,
+            alwaysLinkToLastBuild: false,
+            keepAll: true,
+            reportDir: 'coverage',
             reportFiles: 'index.html',
-            reportName: 'HTML Report'     
+            reportName: 'archani Report'     
       ]
     }
     stage('Arachani') {
