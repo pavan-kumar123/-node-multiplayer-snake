@@ -23,7 +23,7 @@ node ('local_ubuntu'){
 
     stage('Arachani') {
         /* Let's make sure we have the repository cloned to our workspace */
-       sh export name=pavan
+       export name=pavan
        build 'DAST-Arachini'
     }
 }
