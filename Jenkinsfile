@@ -32,6 +32,10 @@ node ('local_ubuntu'){
 
 
       publishHTML target: [
+            allowMissing: false,
+            alwaysLinkToLastBuild: false,
+            keepAll: true,
+            reportDir: '/home/pavankumar/jenkins/jenkins-DevSecOps-WorkSpace/workspace/scripted-snake-app-pipeline',
             reportFiles: 'index.html',
             reportName: 'archani Report'     
       ]
