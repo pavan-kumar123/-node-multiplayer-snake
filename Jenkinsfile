@@ -37,7 +37,7 @@ node ('local_ubuntu'){
             reportDir: 'coverage',
             reportFiles: 'index.html',
             reportName: 'archani Report'     
-
+      ]
     }
     stage('Arachani') {
         /* Let's make sure we have the repository cloned to our workspace */
