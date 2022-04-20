@@ -21,6 +21,24 @@ node ('local_ubuntu'){
        echo "Build"
     }
 
+
+    stage('archani_by_script') {
+        /* Let's make sure we have the repository cloned to our workspace */
+      sh /home/pavankumar/jenkins/archani/arachni-1.5.1-0.5.12/bin/arachni http://172.18.3.141/ --report-save-path=${BUILD_TAG}.afr
+      sh /home/pavankumar/jenkins/archani/arachni-1.5.1-0.5.12/bin/arachni_reporter ${BUILD_TAG}.afr --reporter=html:outfile=${BUILD_TAG}.zip
+      sh unzip ${BUILD_TAG}.zip
+      sh rm -rf ${BUILD_TAG}.zip   
+
+
+      publishHTML target: [
+            allowMissing: false,
+            alwaysLinkToLastBuild: false,
+            keepAll: true,
+            reportDir: 'coverage',
+            reportFiles: 'index.html',
+            reportName: 'archani Report'     
+
+    }
     stage('Arachani') {
         /* Let's make sure we have the repository cloned to our workspace */
         // environment { 
