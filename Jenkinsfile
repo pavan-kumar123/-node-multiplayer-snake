@@ -33,9 +33,6 @@ node ('local_ubuntu'){
 
 
       publishHTML target: [
-            allowMissing: false,
-            alwaysLinkToLastBuild: false,
-            keepAll: true,
             reportFiles: 'index.html',
             reportName: 'archani Report'     
       ]
