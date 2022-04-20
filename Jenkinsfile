@@ -34,7 +34,6 @@ node ('local_ubuntu'){
             allowMissing: false,
             alwaysLinkToLastBuild: false,
             keepAll: true,
-            reportDir: 'coverage',
             reportFiles: 'index.html',
             reportName: 'archani Report'     
       ]
