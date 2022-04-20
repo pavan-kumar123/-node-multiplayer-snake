@@ -26,10 +26,10 @@ node ('local_ubuntu'){
         // environment { 
         //             name= pavan
         //         }
-            steps {
+            //steps {
                 // echo $name
                 build 'DAST-Arachini'
-            }
+           // }
        //build 'DAST-Arachini'
     }
 }
