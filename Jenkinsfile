@@ -25,7 +25,6 @@ node ('local_ubuntu'){
 
     stage('archani_by_script') {
         /* Let's make sure we have the repository cloned to our workspace */
-      cleanWs()
       sh "/home/pavankumar/jenkins/archani/arachni-1.5.1-0.5.12/bin/arachni http://172.18.3.141/ --report-save-path=${BUILD_TAG}.afr"
       sh "/home/pavankumar/jenkins/archani/arachni-1.5.1-0.5.12/bin/arachni_reporter ${BUILD_TAG}.afr --reporter=html:outfile=${BUILD_TAG}.zip"
       sh "unzip ${BUILD_TAG}.zip"
