@@ -1,5 +1,6 @@
 node ('local_ubuntu'){  
  //def app
+  stages{
     stage('Cloning Git') {
         /* Let's make sure we have the repository cloned to our workspace */
       // cleanWs()
@@ -59,4 +60,4 @@ node ('local_ubuntu'){
     }
 }
 
-
+}
