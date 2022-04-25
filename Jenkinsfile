@@ -5,10 +5,19 @@ node ('local_ubuntu'){
       // cleanWs()
        checkout scm
     }  
-    stage('Build and Tag'){
-        // app = docker.build("pa1kilaparthi/snake_game")
-        sh "docker build -t pa1kilaparthi/snake_game ."
-    }   
+
+    stage('Build') {
+        /* Let's make sure we have the repository cloned to our workspace */
+         sh 'docker build -t pa1kilaparthi/snake_game .'
+     }
+
+    stage('anchore scan') {  
+          steps { 
+            // 
+            writeFile file: 'anchore_images', text: 'pa1kilaparthi/snake_game'  
+            anchore name: 'anchore_images'
+          }  
+      }   
     // stage('Publist To DockerHUb'){
     //     docker.withRegistry('https://registry.hub.docker.com','pa1_docker_cred')
     //     app.push("latest")
@@ -17,10 +26,7 @@ node ('local_ubuntu'){
     //     sh "docker-compose down"
     //     sh "docker-compose up -d"
     // }
-    stage('Build') {
-        /* Let's make sure we have the repository cloned to our workspace */
-       echo "Build"
-    }
+
 
 
     stage('archani_by_script') {
